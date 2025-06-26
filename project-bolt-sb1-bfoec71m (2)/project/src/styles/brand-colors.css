@@ -1,0 +1,127 @@
+/* FART WARS Brand Color Palette - Extracted from Logo */
+
+:root {
+  /* Primary Brand Colors - From Logo */
+  --brand-orange: #FF6B35;      /* Vibrant orange from logo flames */
+  --brand-yellow: #FFD23F;      /* Bright yellow from logo highlights */
+  --brand-red: #E63946;         /* Deep red from logo accents */
+  --brand-purple: #7209B7;      /* Purple from logo elements */
+  --brand-pink: #F72585;        /* Hot pink from logo details */
+  
+  /* Secondary Colors - Complementary */
+  --brand-orange-light: #FF8A65;
+  --brand-orange-dark: #D84315;
+  --brand-yellow-light: #FFF176;
+  --brand-yellow-dark: #F57F17;
+  --brand-red-light: #EF5350;
+  --brand-red-dark: #C62828;
+  
+  /* Neutral Colors */
+  --brand-black: #0A0A0A;
+  --brand-gray-900: #1A1A1A;
+  --brand-gray-800: #2A2A2A;
+  --brand-gray-700: #3A3A3A;
+  --brand-gray-600: #4A4A4A;
+  --brand-gray-400: #9CA3AF;
+  --brand-gray-300: #D1D5DB;
+  --brand-white: #FFFFFF;
+  
+  /* Gradient Combinations */
+  --gradient-primary: linear-gradient(135deg, var(--brand-orange) 0%, var(--brand-yellow) 100%);
+  --gradient-secondary: linear-gradient(135deg, var(--brand-red) 0%, var(--brand-pink) 100%);
+  --gradient-accent: linear-gradient(135deg, var(--brand-purple) 0%, var(--brand-pink) 100%);
+  --gradient-fire: linear-gradient(135deg, var(--brand-red) 0%, var(--brand-orange) 50%, var(--brand-yellow) 100%);
+}
+
+/* Brand Typography */
+.brand-heading {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+}
+
+.brand-subheading {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.brand-body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+/* Brand Button Styles */
+.btn-primary {
+  background: var(--gradient-primary);
+  color: var(--brand-black);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-radius: 9999px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 8px 25px rgba(255, 107, 53, 0.4);
+}
+
+.btn-secondary {
+  background: transparent;
+  border: 2px solid var(--brand-orange);
+  color: var(--brand-orange);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-radius: 9999px;
+  transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background: var(--brand-orange);
+  color: var(--brand-black);
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 8px 25px rgba(255, 107, 53, 0.3);
+}
+
+/* Brand Card Styles */
+.brand-card {
+  background: rgba(10, 10, 10, 0.8);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 107, 53, 0.2);
+  border-radius: 16px;
+  transition: all 0.3s ease;
+}
+
+.brand-card:hover {
+  border-color: rgba(255, 107, 53, 0.5);
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(255, 107, 53, 0.1);
+}
+
+/* Brand Animations */
+@keyframes brandPulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+@keyframes brandGlow {
+  0%, 100% { 
+    box-shadow: 0 0 20px rgba(255, 107, 53, 0.3);
+  }
+  50% { 
+    box-shadow: 0 0 40px rgba(255, 107, 53, 0.6);
+  }
+}
+
+.brand-pulse {
+  animation: brandPulse 2s ease-in-out infinite;
+}
+
+.brand-glow {
+  animation: brandGlow 3s ease-in-out infinite;
+}
